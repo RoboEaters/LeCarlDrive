@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/driveCarl"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ToggleButton
+        android:id="@+id/toggleCarl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="@string/toggleCarl" />
+
+    <ToggleButton
+        android:id="@+id/toggleDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textSpeed"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Direction"
+        android:textOff="@string/Forward"
+        android:textOn="@string/Reverse" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignLeft="@+id/toggleDirection"
+        android:text="@string/Direction"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/toggleCarl"
+        android:layout_below="@+id/toggleCarl"
+        android:layout_marginTop="26dp"
+        android:text="@string/fwdSpeed"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textSpeed"
+        android:layout_below="@+id/textSpeed"
+        android:layout_marginTop="15dp"
+        android:text="@string/turnRate"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textIRLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textTurn"
+        android:layout_below="@+id/textTurn"
+        android:layout_marginTop="16dp"
+        android:text="@string/IRLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textIRFront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textIRLabel"
+        android:layout_toLeftOf="@+id/textIRRight"
+        android:maxLength="5"
+        android:text="@string/IRFront"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textIRLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textIRLabel"
+        android:layout_below="@+id/textIRFront"
+        android:maxLength="5"
+        android:text="@string/IRLeft"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textIRRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textIRLeft"
+        android:layout_alignBottom="@+id/textIRLeft"
+        android:layout_alignRight="@+id/textIRLabel"
+        android:maxLength="5"
+        android:text="@string/IRRight"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toggleAuto"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/toggleDirection"
+        android:text="@string/autoCarl"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ToggleButton
+        android:id="@+id/toggleAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textSpeed"
+        android:layout_alignLeft="@+id/textAuto"
+        android:layout_alignRight="@+id/textAuto"
+        android:layout_marginRight="17dp"
+        android:text="@string/toggleCarl" />
+
+</RelativeLayout>
